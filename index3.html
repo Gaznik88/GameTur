@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style3.css">
+    <title>Выбор роли</title>
+    <script src="//code.jivo.ru/widget/Ag0qAN0b5B" async></script>
+</head>
+<body>
+    <div class="floating-items">
+        <img src="./assets/img/gr1.png" alt="Item" class="item1">
+        <img src="./assets/img/gr2.png" alt="Item" class="item2">
+        <img src="./assets/img/gr3.png" alt="Item" class="item3">
+        <img src="./assets/img/gr4.png" alt="Item" class="item4">
+        <img src="./assets/img/gr1.png" alt="Item" class="item5">
+    </div>
+    
+    <div class="container">
+        <div class="title">Выберите, кем хотите стать</div>
+        <div class="roles">
+            <div class="role" data-role="Игрок">
+                <img src="./assets/img/Мышь.svg" alt="Игрок">
+                <span>Игрок</span>
+            </div>
+            <div class="role" data-role="Тренер">
+                <img src="./assets/img/Тренер.svg" alt="Тренер">
+                <span>Тренер</span>
+            </div>
+            <div class="role" data-role="Организатор">
+                <img src="./assets/img/Организатор.svg" alt="Организатор">
+                <span>Организатор</span>
+            </div>
+            <div class="role" data-role="Судья">
+                <img src="./assets/img/Судья.svg" alt="Судья">
+                <span>Судья</span>
+            </div>
+            <div class="role" data-role="Аналитик">
+                <img src="./assets/img/Аналитик.svg" alt="Аналитик">
+                <span>Аналитик</span>
+            </div>
+            <div class="role" data-role="Комментатор">
+                <img src="./assets/img/Комментатор.svg" alt="Комментатор">
+                <span>Комментатор</span>
+            </div>
+        </div>
+        <button class="join-button">Присоединиться</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const roles = document.querySelectorAll('.role');
+            roles.forEach((role) => {
+                role.addEventListener('click', () => {
+                    roles.forEach((r) => r.classList.remove('active'));
+                    role.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
